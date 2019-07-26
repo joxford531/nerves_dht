@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#if defined(rpi)
+#if defined(rpi) || defined(rpi0)
 #  include "rpi/pi_dht_read.h"
 #  define PHT_READ pi_dht_read
 #elif defined(rpi2) || defined(rpi3)

@@ -41,6 +41,9 @@ endif
 ifeq ($(MIX_TARGET),rpi3)
     SRC = $(wildcard src/*.c src/rpi2/*.c)
 endif
+ifeq ($(MIX_TARGET),rpi0)
+    SRC = $(wildcard src/*.c src/rpi/*.c)
+endif
 SRC ?=
 
 OBJ=$(SRC:.c=.o)
