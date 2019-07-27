@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#if defined(rpi) || defined(rpi0)
+#if defined(rpi)
 #  include "rpi/pi_dht_read.h"
 #  define PHT_READ pi_dht_read
 #elif defined(rpi2) || defined(rpi3)
 #  include "rpi2/pi_2_dht_read.h"
 #  define PHT_READ pi_2_dht_read
+#elif defined(rpi0)
+#  include "rpi/pi_dht_read.h"
+#  define PHT_READ pi_dht_read
 #endif
 
 static int parse_argv(int argc, char **argv, int *sensor, int *pin) {
