@@ -1,13 +1,11 @@
 # Nerves DHT
 
-[![Build Status](https://travis-ci.org/visciang/nerves_dht.svg?branch=master)](https://travis-ci.org/visciang/nerves_dht) [![Docs](https://img.shields.io/badge/docs-latest-green.svg)](https://visciang.github.io/nerves_dht/readme.html) [![Coverage Status](https://coveralls.io/repos/github/visciang/nerves_dht/badge.svg?branch=master)](https://coveralls.io/github/visciang/nerves_dht?branch=master)
-
 Elixir library to read the DHT series of humidity and temperature sensors on a Raspberry Pi.
 The library is supposed to be included in a [nerves project](http://nerves-project.org/).
 
 If you want to build your project directly on a Raspberry (not in a crosscompiling nerves project)
 just export `MIX_TARGET` environment variable to you mix build.
-Valid values for `MIX_TARGET` are `rpi`, `rp2`, `rp3`.
+Valid values for `MIX_TARGET` are `rpi`, `rp2`, `rp3`, `rpi0`.
 
 * Supported sensors: DHT11, DHT22, AM2302
 * Supported boards: Raspberry 1, 2, 3
@@ -21,7 +19,7 @@ The package can be installed by adding `nerves_dht` to your list of dependencies
 ```elixir
 def deps do
   [
-    {:nerves_dht, git: "https://github.com/visciang/nerves_dht.git", tag: "xxx"}
+    {:nerves_dht, git: "https://github.com/joxford531/nerves_dht.git"}
   ]
 end
 ```
